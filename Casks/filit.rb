@@ -20,8 +20,6 @@ cask "filit" do
     run "/usr/bin/xattr",
         args:         ["-cr", "{{appdir}}/Filit.app"],
         must_succeed: false
-    run "/usr/bin/open",
-        args: ["-a", "{{appdir}}/Filit.app"]
   end
 
   zap trash: [
@@ -30,10 +28,7 @@ cask "filit" do
   ]
 
   caveats <<~EOS
-    Filit needs Accessibility permission to read fields and paste.
-    Grant access in:
-      System Settings → Privacy & Security → Accessibility
-
-    Add your TypeSafe API key in Filit → Settings.
+    Open Filit from Applications or Spotlight. The welcome window
+    walks through Accessibility and your TypeSafe API key.
   EOS
 end

@@ -16,8 +16,6 @@ cask "filit" do
 
   app "Filit.app"
 
-  # Ad-hoc signed builds trip Gatekeeper quarantine; clear it after install.
-  # Not a substitute for Apple notarization (required for official homebrew/cask).
   postflight_steps do
     run "/usr/bin/xattr",
         args:         ["-cr", "{{appdir}}/Filit.app"],
@@ -35,8 +33,5 @@ cask "filit" do
       System Settings → Privacy & Security → Accessibility
 
     Add your TypeSafe API key in Filit → Settings.
-
-    This build is ad-hoc signed (not Apple-notarized). The cask clears
-    quarantine after install so Gatekeeper should not block first launch.
   EOS
 end

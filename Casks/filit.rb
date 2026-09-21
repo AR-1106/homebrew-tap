@@ -1,6 +1,6 @@
 cask "filit" do
   version "0.1.0"
-  sha256 "d478afee6f2289c6947f0486b5c4489708205c2e196735b003166c007dac7575"
+  sha256 "bc4ee6b4651a78fdb2ca16370ccbbf09fc35a7b18302ea4330b4b4b4f5d0bcb5"
 
   url "https://github.com/AR-1106/filit/releases/download/v#{version}/Filit-#{version}.zip"
   name "Filit"
@@ -20,6 +20,8 @@ cask "filit" do
     run "/usr/bin/xattr",
         args:         ["-cr", "{{appdir}}/Filit.app"],
         must_succeed: false
+    run "/usr/bin/open",
+        args: ["-a", "{{appdir}}/Filit.app"]
   end
 
   zap trash: [

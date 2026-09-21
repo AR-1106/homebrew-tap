@@ -1,6 +1,6 @@
 cask "filit" do
   version "0.1.0"
-  sha256 "b3ca3fb1f129aac5c000a7c481091b80f55ab3a241b409c6d6928c8c84f8c9b9"
+  sha256 "1fed709bfe294f351dddbeca3bac12dc19bfe674db311c3a46c4f91fef13b919"
 
   url "https://github.com/AR-1106/filit/releases/download/v#{version}/Filit-#{version}.zip"
   name "Filit"

@@ -1,22 +1,21 @@
-# Homebrew Tap for Shoo
+# Homebrew Tap
 
-This is the official Homebrew tap for [Shoo](https://github.com/AR-1106/Shoo) — a macOS menu bar utility that lets you close and manage windows directly from Mission Control.
+Personal tap for macOS apps by [AR-1106](https://github.com/AR-1106).
 
-## Installation
+## Apps
+
+| Cask | Install | Repo |
+| --- | --- | --- |
+| [Filit](https://github.com/AR-1106/filit) | `brew install --cask filit` | Smart paste via TypeSafe |
+| [Shoo](https://github.com/AR-1106/Shoo) | `brew install --cask shoo` | Close windows from Mission Control |
+
+## Setup
 
 ```bash
 brew tap AR-1106/tap
-brew install --cask shoo
+brew install --cask filit   # or shoo
 ```
 
-## Updating
+## Notes
 
-```bash
-brew upgrade --cask shoo
-```
-
-## Uninstalling
-
-```bash
-brew uninstall --cask shoo
-```
+These casks ship **ad-hoc signed** builds (not Apple-notarized). Each cask clears quarantine after install so Gatekeeper should not block first launch. Official `homebrew/cask` still requires Developer ID + notarization.
